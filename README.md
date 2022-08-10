@@ -16,7 +16,7 @@ npm install @honojs/validator
 Deno:
 
 ```ts
-import { validator } from 'https://deno.land/x/hono_validator/mod.ts'
+import { validation } from 'https://deno.land/x/hono_validator/mod.ts'
 ```
 
 ## Usage
