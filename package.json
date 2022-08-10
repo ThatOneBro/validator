@@ -16,7 +16,7 @@
     "denoify": "rimraf deno_dist && denoify",
     "build": "rimraf dist && tsc",
     "prerelease": "yarn denoify && yarn build && yarn test:all",
-    "release": "yarn publish",
+    "release": "np",
     "lint": "eslint --ext js,ts src .eslintrc.js",
     "lint:fix": "eslint --ext js,ts src .eslintrc.js --fix"
   },
