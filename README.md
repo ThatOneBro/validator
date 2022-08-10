@@ -133,17 +133,17 @@ You can handle the errors more flexibly using `done` method.
 app.get(
   '/custom-error',
   validation((v) => ({
-    query: {
+    body: {
       userId: v.required,
     },
     done: (result, c) => {
       if (result.hasError) {
-        return c.json({ OK: false }, 404)
+        return c.json({ messages: result.messages }, 403)
       }
     },
   })),
   (c) => {
-    return c.json({ OK: true })
+    return c.json({ messages: ['SUCCESS'] })
   }
 )
 ```
