@@ -3,7 +3,17 @@
 Validator middleware for [Hono](https://github.com/honojs/hono).
 This middleware that wraps [validator.js](https://github.com/validatorjs/validator.js) validates form body, queries, headers, and JSON body.
 
-**IT'S BETA QUALITY. DO NOT USE IT FOR PRODUCTION USAGE.**
+![SS](https://user-images.githubusercontent.com/10682/184135311-bdc9bd65-3e58-4d36-9709-bdf324e808ad.png)
+
+## Features
+
+- **Hono integration** - You can use it just like any other middleware.
+- **Multi platform** - Works on Cloudflare Workers, Deno, Bun, and others.
+- **A lot of rules** - Rules defined in [validator.js](https://github.com/validatorjs/validator.js) are available.
+- **Sanitization** - Sanitize functions like `trim` are also available.
+- **Rendering error automatically** - If it's a bother, you don't have to set error messages.
+- **Result set** - It's flexible to handle validation results.
+- **JSON Path** - You can specify the JSON value using "_JSON Path_".
 
 ## Install
 
@@ -23,6 +33,13 @@ import { validation } from 'https://deno.land/x/hono_validator/mod.ts'
 
 //...
 serve(app.fetch)
+```
+
+Bun:
+
+```
+bun install hono
+bun install @honojs/validator
 ```
 
 ## Usage
@@ -153,6 +170,19 @@ app.get(
   }
 )
 ```
+
+## Contributing
+
+Contributions Welcome! See the contribution guide on Hono repository.
+
+- [Contribution Guide](https://github.com/honojs/hono/blob/main/docs/CONTRIBUTING.md)
+
+## Related Projects
+
+- Hono - <https://honojs.dev/>
+- Hono Examples - <https://github.com/honojs/examples>
+- validator.js - <https://github.com/validatorjs/validator.js>
+- JSONPath-Plus - <http://goessner.net/articles/JsonPath/](https://github.com/JSONPath-Plus/JSONPath>
 
 ## Author
 
