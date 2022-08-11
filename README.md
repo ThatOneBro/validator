@@ -10,13 +10,19 @@ This middleware that wraps [validator.js](https://github.com/validatorjs/validat
 npm:
 
 ```
+npm install hono
 npm install @honojs/validator
 ```
 
 Deno:
 
 ```ts
+import { serve } from 'https://deno.land/std/http/server.ts'
+import { Hono } from 'https://deno.land/x/hono/mod.ts'
 import { validation } from 'https://deno.land/x/hono_validator/mod.ts'
+
+//...
+serve(app.fetch)
 ```
 
 ## Usage
